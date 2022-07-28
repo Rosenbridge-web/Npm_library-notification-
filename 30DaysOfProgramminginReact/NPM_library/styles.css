@@ -1,0 +1,50 @@
+.toast {
+    box-sizing: border-box;
+    padding: 1rem ;
+    border-radius: 0.5rem;
+    border:1px solid #333;
+    background-color: white ;
+    position: relative ;
+    width: 100%;
+    cursor: pointer ;
+}
+   
+.toast::after  {
+        content: "\00D7";
+        position : absolute ;
+        top : 2px ; 
+        right : 5px ;  
+     }
+
+.toast_container {
+    position: fixed ;
+    width : 250px   ; 
+    gap : 0.5rem ;
+    display: flex;
+    flex-direction: column ;
+}
+.toast_container[position^= "top-"] {
+ top: 0  ;
+
+}
+    
+.toast_container[position^= "bottom-"] {
+    bottom: 0  ;
+   
+   }
+   .toast_container[position$="-left"] {
+    left: 0  ;
+   
+   }
+   .toast_container[position$= "-right"] {
+    right: 0  ;
+   
+   }
+   .toast_container[position$= "-center"] {
+    left : 50%;
+    transform: translatex(-50%);
+   
+   }
+    
+
+    
